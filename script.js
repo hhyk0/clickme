@@ -14,3 +14,12 @@ clickBox.addEventListener("click", () => {
     // localStorage에 저장
     localStorage.setItem('clickCount', count);
 });
+
+const resetBtn = document.getElementById("resetBtn");
+
+resetBtn.addEventListener("click", () => {
+    if (confirm("정말 초기화할까요?")) {
+        count = 0;
+        counter.innerText = String(count).padStart(6, '0');
+    }
+});
